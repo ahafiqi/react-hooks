@@ -1,45 +1,50 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [state, setState] = useState({
+    counter: 0,
+    foodz: ["Nasi Goreng", "Mie Goreng", "Ikan Goreng"],
+  });
+
+  const [counter, setCounter] = useState(0);
+  const [foods, setFoods] = useState([
+    "Nasi Goreng",
+    "Mie Goreng",
+    "Ikan Goreng",
+  ]);
+
+  const addCounter = () => {
+    // setCounter(counter + 1);
+    setState({
+      ...state,
+      counter: state.counter + 1,
+      foodz: state.foodz.concat("kewtiwau"),
+    });
+  };
+
+  console.log(state.foodz);
+
+  const addFood = () => {
+    setState({
+      ...state,
+      foodz: state.foodz.concat("Batagor"),
+    });
+  };
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+      <h1>Nilai dari state counter</h1>
+      <p>{state.counter}</p>
+      <button onClick={addCounter}>Add counter & Food</button>
+      <div>
+        {state.foodz.map((item, i) => (
+          <p key={i}>{item}</p>
+        ))}
+        <button onClick={addFood}>Add Food</button>
+      </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
