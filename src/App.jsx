@@ -19,18 +19,15 @@ function App() {
     setState({
       ...state,
       counter: state.counter + 1,
-      foodz: state.foodz.concat("kewtiwau"),
+      foodz: state.foodz.concat("Kewtiwau"),
     });
+  };
+
+  const addFood = () => {
+    setState({ ...state, foodz: state.foodz.concat("Batagor") });
   };
 
   console.log(state.foodz);
-
-  const addFood = () => {
-    setState({
-      ...state,
-      foodz: state.foodz.concat("Batagor"),
-    });
-  };
 
   return (
     <div className="App">
