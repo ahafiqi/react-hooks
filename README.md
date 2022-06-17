@@ -2,5 +2,5 @@
 
 - useState
 - useEffect
-  - useEffect CleanUp
+- useEffect CleanUp
 - useRef
