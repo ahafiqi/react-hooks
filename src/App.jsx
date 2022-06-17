@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import UseState from "./components/hooks/useState";
-import UseEffect from "./components/hooks/useEffect";
-import CleanUp1 from "./components/hooks/useEffect/CleanUp1";
-import CleanUp2 from "./components/hooks/useEffect/CleanUp2";
-import CleanUp3 from "./components/hooks/useEffect/CleanUp3";
-import CleanUp4 from "./components/hooks/useEffect/CleanUp4";
+import UseState from "./hooks/useState";
+import UseEffect from "./hooks/useEffect";
+import CleanUp1 from "./hooks/useEffect/CleanUp1";
+import CleanUp2 from "./hooks/useEffect/CleanUp2";
+import CleanUp3 from "./hooks/useEffect/CleanUp3";
+import CleanUp4 from "./hooks/useEffect/CleanUp4";
 
 const App = () => {
   return (

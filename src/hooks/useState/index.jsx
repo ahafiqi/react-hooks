@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../../../App.css";
+import "../../App.css";
 
 const UseState = () => {
   //bentuk 1 state bentuk objek yang terdapat array

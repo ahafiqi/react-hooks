@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import "../../../App.css";
+import "../../App.css";
 
 const UseEffect = () => {
   const [counter, setCounter] = useState(0);
