@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { render } from "react-dom";
 
+//untuk logging
 const UseRef1 = () => {
   const [counter, setCounter] = useState(0);
   const rerender = useRef(1);
