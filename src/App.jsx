@@ -9,6 +9,7 @@ import CleanUp4 from "./hooks/useEffect/CleanUp4";
 import UseRef1 from "./hooks/useRef/UseRef1";
 import UseRef2 from "./hooks/useRef/UseRef2";
 import UseRef3 from "./hooks/useRef/UseRef3";
+import UseCallbackComponenct from "./hooks/useCallback";
 
 const App = () => {
   return (
@@ -24,7 +25,10 @@ const App = () => {
       <React.Fragment>
         {/* <UseRef1 /> */}
         {/* <UseRef2 /> */}
-        <UseRef3 />
+        {/* <UseRef3 /> */}
+      </React.Fragment>
+      <React.Fragment>
+        <UseCallbackComponenct />
       </React.Fragment>
     </div>
   );
