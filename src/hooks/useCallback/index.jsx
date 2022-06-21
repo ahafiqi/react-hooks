@@ -1,23 +1,24 @@
 import React, { useState, useCallback } from "react";
 import Display from "./Display";
 
+//menyimpan function
 const UseCallbackComponent = () => {
   const [counter, setCounter] = useState(1);
   const [showData, setShowData] = useState(false);
 
   //2 callabck
   //pakai var dari luar
-  //di memoized
+  //di memoized (simpan) agar tidak dibuat ulang
   const getCounterData = useCallback(() => {
     return [counter * 2, counter * 3, counter * 4];
-    //setiap klik fungsinya kan dibuat ulang
+    //setiap klik fungsinya akan dibuat ulang
   }, [counter]); //tidak akan dirender lagi karena sudah spesifik jika ada perubahan counter saja
 
   //hanya pakai var dalam
   const getRandomData = useCallback(() => {
     const random = Math.floor(Math.random() * 100) + 1;
     return [random * 2, random * 3, random * 4];
-  }, []);
+  }, []); //dep kosong agar setiap perubahan tidak mentrigger useEffect
 
   return (
     <div>
@@ -32,7 +33,7 @@ const UseCallbackComponent = () => {
         <button onClick={() => setShowData(!showData)}>Show /Hide</button>
       </div>
       {/* lepar props */}
-      <Display getData={getRandomData} />
+      <Display getData={getCounterData} />
     </div>
   );
 };
