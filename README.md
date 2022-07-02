@@ -12,3 +12,4 @@
 - useCallback
 - useMemo
 - useContext
+- useContext Part2

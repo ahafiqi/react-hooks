@@ -20,14 +20,14 @@ export const userContext = createContext({
   email: "ahafiqi@gmail.com",
 });
 
-export const themeContext = createContext({
-  theme: "dark",
-  primary: "red",
-});
-
 const App = () => {
   return (
-    <div className="App">
+    <div className="App light">
+      <React.Fragment>
+        {/* <Topbar />
+        <div className="page">Page Content</div>
+        <Footer /> */}
+      </React.Fragment>
       <React.Fragment>
         {/* <Topbar /> */}
         {/* <Footer /> */}
@@ -43,7 +43,7 @@ const App = () => {
         {/* <CleanUp2 /> */}
         {/* <CleanUp1 /> */}
         {/* <UseEffect /> */}
-        {/* <UseState /> */}
+        <UseState />
       </React.Fragment>
     </div>
   );

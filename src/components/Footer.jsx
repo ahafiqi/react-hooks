@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { userContext, themeContext } from "../App";
+import { userContext} from "../App";
 
 //cara 2
 const Footer = () => {
